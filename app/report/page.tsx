@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ReportProblem() {
   const metadata = getSEOTags({
     title: "Report a Problem | " + config.appName,
-    description: "Report any issues, bugs, or problems you are encountering. We're here to help.",
+    description: "Report any issues, bugs, or problems you are encountering. We are here to help.",
   });
 
   const reportMetadata = {
@@ -37,7 +37,7 @@ export default function ReportProblem() {
         </Link>
 
         <p className="text-lg text-center mb-8">
-          Having trouble with the app or website? Let us know what the issue is, and we'll help you resolve it as soon as possible.
+          Having trouble with the app or website? Let us know what the issue is, and we&apos;ll help you resolve it as soon as possible.
         </p>
 
         <form action="submit_report_form.php" method="POST">
@@ -71,7 +71,7 @@ export default function ReportProblem() {
                 name="problemDescription"
                 rows={5}
                 className="w-full p-3 border border-gray-300 rounded-md"
-                placeholder="Describe the issue you're facing."
+                placeholder="Describe the issue you&apos;re facing."
                 required
               ></textarea>
             </div>

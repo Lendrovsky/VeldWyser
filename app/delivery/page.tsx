@@ -57,10 +57,11 @@ export default function DeliveryPolicy() {
               To view or download your purchased items:
             </p>
             <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-              <li>Go to the "My Purchases" section in your account.</li>
-              <li>Select the item you wish to access.</li>
-              <li>If you experience issues, please contact our support team for assistance.</li>
-            </ul>
+            <li>Go to the &quot;My Purchases&quot; section in your account.</li>
+            <li>Select the item you wish to access.</li>
+            <li>If you experience issues, please contact our support team for assistance.</li>
+          </ul>
+
           </div>
 
           {/* Refund & Cancellation Policy */}

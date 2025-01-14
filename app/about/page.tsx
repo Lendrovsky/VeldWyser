@@ -20,7 +20,7 @@ const AboutVeldWyser = () => {
         <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
         <p className="text-gray-700">
           To provide innovative tools and insights that help farmers maximize their 
-          land’s potential while preserving natural resources for future generations.
+          land&apos;s potential while preserving natural resources for future generations.
         </p>
       </section>
 

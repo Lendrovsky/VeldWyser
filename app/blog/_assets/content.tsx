@@ -44,7 +44,7 @@ export const categories: categoryType[] = [
     titleShort: "Features",
     // The description of the category to display in the category page. Up to 160 characters.
     description:
-      "Here are the latest features we've added to Veld Wyser. We are constantly improving our product to achieve the best possible result for you.",
+      "Here are the latest features we have added to Veld Wyser. We are constantly improving our product to achieve the best possible result for you.",
     // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
     descriptionShort: "Latest features added to Veld Wyser.",
   },
@@ -53,7 +53,7 @@ export const categories: categoryType[] = [
     title: "How Tos & Tutorials",
     titleShort: "Tutorials",
     description:
-      "Learn how to use Veld Wyser with these step-by-step tutorials. I'll show you how to use Veld Wyser and save time.",
+      "Learn how to use Veld Wyser with these step-by-step tutorials. I will show you how to use Veld Wyser and save time.",
     descriptionShort:
       "Learn how to use Veld Wyser with these step-by-step tutorials.",
   },
@@ -168,7 +168,7 @@ export const authors: authorType[] = [
     job: "Policy Advisor and CEO of Veld Wyser",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Leendert is a policy advisor and an entrepreneur. He's been working in South Africa for the past two years, with a focus on water mangement.",
+      "Leendert is a policy advisor and an entrepreneur. He has been working in South Africa for the past two years, with a focus on water mangement.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
     avatar: leendertImg,
     // A list of social links to display in the author's bio.
@@ -265,7 +265,7 @@ export const articles: articleType[] = [
           <h3 className={styles.h3}>1. Sign up to stay updated</h3>
           <p className={styles.p}>
             When you are interested in the development of Veld Wyser, please consider registering or signing up for our newsletters. We will keep you updated on the developments
-            and we will invite you to the early access. If you're interested, you might become a tester of Veld Wyser.
+            and we will invite you to the early access. If you&apos;re interested, you might become a tester of Veld Wyser.
           </p>
         </section>
 

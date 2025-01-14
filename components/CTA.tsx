@@ -25,7 +25,7 @@ const CTA = () => {
             Together we create the best possible tool for your farm.
           </p>
           <p className="text-lg opacity-80 mb-12 md:mb-16">
-            Join our early access and plant your seeds today so that tomorrow's ideas may flourish.
+            Join our early access and plant your seeds today so that tomorrow&apos;s ideas may flourish.
           </p>
 
           {/* Nieuwsbrief formulier */}

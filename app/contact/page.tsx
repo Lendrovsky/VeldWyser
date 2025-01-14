@@ -31,8 +31,8 @@ export default function Contact() {
           <div>
             <h2 className="font-bold text-xl mb-4">Need us?</h2>
             <p className="text-base opacity-80 leading-relaxed mb-6">
-              We’d love to hear from you! Whether you have a question, comment, or
-              would like to learn more about our services, feel free to reach out. We're here to assist you.
+              We&apos;d love to hear from you! Whether you have a question, comment, or
+              would like to learn more about our services, feel free to reach out. We&apos;re here to assist you.
             </p>
             <form action="submit_form.php" method="post">
               <label htmlFor="name" className="block mb-2">Name:</label>

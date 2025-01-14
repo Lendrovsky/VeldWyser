@@ -94,7 +94,7 @@ export default function SecurityAndAuthenticity() {
             <h2 className="text-2xl font-semibold mb-4">Need Help?</h2>
             <p className="text-base text-gray-700 leading-relaxed">
               If you have any concerns about the security of your account or the authenticity of a product, 
-              please don't hesitate to contact us. Our dedicated support team is here to assist you.
+              please don&apos;t hesitate to contact us. Our dedicated support team is here to assist you.
             </p>
             <Link href="/contact">
               <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
