@@ -85,7 +85,7 @@ const ButtonLead: React.FC<ButtonLeadProps> = ({ extraStyle }) => {
       />
       <button
         className="btn btn-block text-white border-none"
-        style={{ backgroundColor: "#EC6B0C" }}
+        style={{ backgroundColor: "#4a00ff" }}
         type="submit"
         disabled={isDisabled}
       >
