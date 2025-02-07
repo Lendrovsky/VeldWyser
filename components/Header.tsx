@@ -135,15 +135,6 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden p-2"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-
         {/* Mobiel menu */}
         {isOpen && (
           <div className="lg:hidden absolute left-0 right-0 bg-white shadow-md py-4 flex flex-col items-center gap-4">
