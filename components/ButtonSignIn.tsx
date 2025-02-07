@@ -2,6 +2,7 @@ import { useSession, signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import config from "@/config";
+import Image from "next/image"; // Import Image
 
 // Een simpele knop voor inloggen met ondersteuning voor Google & Magic Links.
 const ButtonSignIn = ({
@@ -31,14 +32,14 @@ const ButtonSignIn = ({
         }`}
       >
         {session.user?.image ? (
-          <img
-            src={session.user?.image}
-            alt={session.user?.name || "Account"}
-            className="w-6 h-6 rounded-full shrink-0"
-            referrerPolicy="no-referrer"
-            width={24}
-            height={24}
-          />
+          <Image
+          src={session.user?.image}
+          alt={session.user?.name || "Account"}
+          className="w-6 h-6 rounded-full shrink-0"
+          referrerPolicy="no-referrer"
+          width={24} // Nodig bij Next.js Image
+          height={24} // Nodig bij Next.js Image
+        />
         ) : (
           <span className="w-6 h-6 bg-base-300 flex justify-center items-center rounded-full shrink-0">
             {session.user?.name?.charAt(0) || session.user?.email?.charAt(0)}

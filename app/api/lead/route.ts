@@ -77,6 +77,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       .insert([{ name, email, created_at: new Date(), unsubscribe_token: unsubscribeToken }])
       .select();
 
+      // Example: Log the inserted data (or do further processing)
+      console.log('Inserted lead data:', data);
+
     if (error) {
       console.error('Database insert error:', error);
       return NextResponse.json({ error: 'Failed to insert lead' }, { status: 500 });

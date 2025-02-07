@@ -1,6 +1,7 @@
 import config from "@/config";
 import Head from "next/head";
 import { getSEOTags } from "@/libs/seo";
+import Image from "next/image"; // Import Image from next/image
 
 export default function Contact() {
   const metadata = getSEOTags({
@@ -23,7 +24,7 @@ export default function Contact() {
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       </Head>
 
-      {/* Wrapper om de layout te beperken */}
+      {/* Wrapper to limit the layout */}
       <div className="max-w-6xl mx-auto px-4 mt-16 mb-24">
         {/* Grid Layout */}
         <section className="grid lg:grid-cols-2 gap-8">
@@ -75,15 +76,33 @@ export default function Contact() {
             <h2 className="font-bold text-xl mb-4">Contact Information</h2>
             <address className="space-y-4">
               <p className="flex items-center">
-                <img src="/images/icons/location.png" alt="Location" className="w-6 h-6 mr-3" />
+                <Image
+                  src="/images/icons/location.png"
+                  alt="Location"
+                  width={24} // Define width
+                  height={24} // Define height
+                  className="mr-3"
+                />
                 Street Name 123, 1234 AB City, Netherlands
               </p>
               <p className="flex items-center">
-                <img src="/images/icons/phone.png" alt="Phone" className="w-6 h-6 mr-3" />
+                <Image
+                  src="/images/icons/phone.png"
+                  alt="Phone"
+                  width={24}
+                  height={24}
+                  className="mr-3"
+                />
                 +31 (0) 123 456 789
               </p>
               <p className="flex items-center">
-                <img src="/images/icons/mail.png" alt="Email" className="w-6 h-6 mr-3" />
+                <Image
+                  src="/images/icons/mail.png"
+                  alt="Email"
+                  width={24}
+                  height={24}
+                  className="mr-3"
+                />
                 <a href="mailto:info@veldwyser.com" className="hover:underline">info@veldwyser.com</a>
               </p>
             </address>

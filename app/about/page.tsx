@@ -1,5 +1,6 @@
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
+import Image from "next/image"; // Import Image from next/image
 
 export const metadata = getSEOTags({
   title: `About Veld Wyser | ${config.appName}`,
@@ -28,7 +29,7 @@ const AboutVeldWyser = () => {
         <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
         <p className="text-gray-700">
           To be the leading platform for smart, sustainable agriculture, empowering 
-          farmers in South Africa through technology and collaboration. We achieve this by offer a data driven solution that is affordable and as reliable as possible.
+          farmers in South Africa through technology and collaboration. We achieve this by offering a data-driven solution that is affordable and as reliable as possible.
         </p>
       </section>
 
@@ -36,10 +37,12 @@ const AboutVeldWyser = () => {
         <h2 className="text-2xl font-bold mb-4">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center">
-          <img
+            <Image
               src="/images/authors/Leendert.jpg"
               alt="Leendert Visser"
-              className="w-32 h-32 rounded-full mx-auto"
+              width={128} // Set the width for the image
+              height={128} // Set the height for the image
+              className="rounded-full mx-auto"
             />
             <h3 className="text-lg font-semibold mt-4">Leendert Visser</h3>
             <p className="text-gray-600">Founder & CEO</p>

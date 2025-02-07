@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Arrow = ({ extraStyle }: { extraStyle: string }) => {
   return (
     <svg
@@ -32,9 +34,11 @@ const Step = ({
 }) => {
   return (
     <div className="w-full md:w-48 flex flex-col gap-2 items-center justify-center">
-      <img
+      <Image
         src={iconSrc}
         alt="Step icon"
+        width={64} // Pas aan naar de gewenste afmetingen
+        height={64} // Pas aan naar de gewenste afmetingen
         className={`w-16 h-16 object-contain relative z-10 ${className}`}
       />
       <h3 className="font-bold">{text}</h3>

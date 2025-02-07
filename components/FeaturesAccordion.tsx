@@ -30,11 +30,12 @@ const features = [
     path: "/images/multiplatform.png",
     format: "image/png",
     svg: (
-      <img
-        src="/images/icons/multiplatform.png" // Vervang dit met het pad naar je afbeelding of icoon
-        alt="Custom Icon"
-        className="w-14 h-14"
-      />
+      <Image
+      src="/images/icons/multiplatform.png"
+      alt="Custom Icon"
+      width={56}
+      height={56}
+    />
     ),
   },
   {
@@ -46,11 +47,12 @@ const features = [
       path: "/images/smartfarm.webp",
       format: "image/webp",
       svg: (
-        <img
-          src="/images/icons/data.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/data.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
   {
@@ -63,11 +65,12 @@ const features = [
       path: "/images/runderen1.png",
       format: "image/png",
       svg: (
-        <img
-          src="/images/icons/grazing cow.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/grazing cow.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
   {
@@ -80,11 +83,12 @@ const features = [
       path: "/images/farmer2.webp",
       format: "image/webp",
       svg: (
-        <img
-          src="/images/icons/history.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/history.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
   {
@@ -96,11 +100,12 @@ const features = [
       path: "/images/monitoringfoto.png",
       format: "image/png",
       svg: (
-        <img
-          src="/images/icons/monitoring.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/monitoring.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
   {
@@ -111,11 +116,12 @@ const features = [
       path: "/images/veld.jpg",
       format: "image/jpg",
       svg: (
-        <img
-          src="/images/icons/climate.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/monitoring.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
   {
@@ -126,11 +132,12 @@ const features = [
       path: "/images/farmer.webp",
       format: "image/webp",
       svg: (
-        <img
-          src="/images/icons/legislation.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/legislation.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
   {
@@ -141,11 +148,12 @@ const features = [
       path: "/images/communitychristian.jpg",
       format: "image/jpg",
       svg: (
-        <img
-          src="/images/icons/community.png" // Vervang dit met het pad naar je afbeelding of icoon
-          alt="Custom Icon"
-          className="w-14 h-14"
-        />
+        <Image
+        src="/images/icons/community.png"
+        alt="Custom Icon"
+        width={56}
+        height={56}
+      />
       ),
   },
 ] as Feature[];
