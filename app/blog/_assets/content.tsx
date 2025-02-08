@@ -2,6 +2,9 @@ import type { JSX } from "react";
 import Image, { StaticImageData } from "next/image";
 import leendertImg from "@/app/blog/_assets/images/authors/leendert.jpg";
 import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
+import meetingImg from "@/public/blog/introducing-supabase/meeting.jpg"
+import Poll from "@/app/blog/_assets/components/poll";
+
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -280,4 +283,57 @@ export const articles: articleType[] = [
       </>
     ),
   },
+  {
+    slug: "VeldWyserPitch",
+    title: "Pitching Veld Wyser",
+    description: "Pitching the initiative of Veld Wyser to the potential users.",
+    categories: [
+      categories.find((category) => category.slug === categorySlugs.general),
+    ],
+    author: authors.find((author) => author.slug === authorSlugs.leendert),
+    publishedAt: "2025-01-23",
+    image: {
+      src: meetingImg, // Vervang met een nieuwe afbeelding als die beschikbaar is
+      urlRelative: "/blog/new-article/meeting.jpg",
+      alt: "New Innovations in Veld Wyser",
+    },
+    content: (
+      <>
+        <Image
+          src={meetingImg} // Vervang met een nieuwe afbeelding
+          alt="Picture of the meat study group"
+          width={700}
+          height={500}
+          priority={true}
+          className="rounded-box"
+          placeholder="blur"
+        />
+        <section>
+          <h2 className={styles.h2}>Introduction</h2>
+          <p className={styles.p}>
+            We are excited to inform you about the meeting we had on January 23rd with the meat study group in Potchefstroom. This meeting was 
+            held as part of the regular meetings the study group organizes. The meeting was attended by around 30 farmers from the Potchefstroom district.
+          </p>
+        </section>
+  
+        <section>
+          <h3 className={styles.h3}>Results</h3>
+          <p className={styles.p}>
+            With the chair of the study group we have made an appointment to be able to pitch the idea to the farmers present. I started by telling them who I am, where I am from and what I am doing there.
+            With a few jokes here and there, we moved into the serious part of the meeting. I pitching the idea feedback started to flow. This feedback was very helpful, and I am grateful for it. I now know we are on the right
+            track with the idea of Veld Wyser. 
+          </p>
+        </section>
+  
+        <section>
+          <h3 className={styles.h3}>And now?</h3>
+          <p className={styles.p}>
+            We will now start developing the app. As soon as we have a general planning, we will post that here in a new blogpost. Furthermore, we would like your feedback. It would definitely help us if you let us know if you would consider using Veld Wyser
+            on your farm.
+          </p>
+        </section>
+        <Poll/>
+      </>
+    ),
+  }
 ];
