@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -12,28 +12,43 @@ const RegisterPage = () => {
     email: "",
     password: "",
     province: "",
-    country: "South Africa", // Standaard waarde
+    country: "South Africa", // Default value
     subscribe: false,
   });
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Client-side check to ensure hydration consistency
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Set to true after the component mounts
+  }, []);
+
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value, checked, type } = event.target as HTMLInputElement;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    const { name, value, type } = event.target;
+    
+    if (type === "checkbox") {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: (event.target as HTMLInputElement).checked,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setIsSubmitting(true);
-
-    // Validatie van de invoer
+  
+    // Validation of input
     if (!formData.firstName.trim()) {
       setError("First name is required.");
       setIsSubmitting(false);
@@ -59,35 +74,45 @@ const RegisterPage = () => {
       setIsSubmitting(false);
       return;
     }
-
+  
     try {
-      const response = await fetch("/api/auth/register", {
+      const response = await fetch("/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
+  
+      // Controleer of de response een geldige JSON is
       if (response.ok) {
-        router.push("/welcome"); // Navigeren naar een welkomstpagina
+        router.push("/welcome");
       } else {
-        const data = await response.json();
-        setError(data.message || "An error occurred. Please try again.");
+        // Log de body van de response als tekst voor verder onderzoek
+        const textResponse = await response.text();
+        console.error("Registration failed:", textResponse); // Log de tekst van de response
+        setError("An error occurred. Please try again.");
       }
     } catch (err) {
+      console.error("Registration failed:", err); // Log eventuele netwerk- of serverfouten
       setError("Failed to register. Please try again later.");
     }
-
+  
     setIsSubmitting(false);
   };
+  
+
+  // Render the component as usual, but only execute client-specific logic after mounting
+  if (!isClient) {
+    return <div />; // Avoid hydration issues by rendering a placeholder
+  }
 
   return (
     <main className="max-w-md mx-auto mt-16 p-8 border border-gray-300 rounded shadow-md">
       <h1 className="text-2xl font-bold mb-4">Create an Account</h1>
       {error && <p className="text-red-500 mb-4">{error}</p>}
       <form onSubmit={handleSubmit}>
-        {/* Voornaam */}
+        {/* First Name */}
         <label htmlFor="firstName" className="block mb-2">
           First Name
         </label>
@@ -101,7 +126,7 @@ const RegisterPage = () => {
           className="w-full p-2 mb-4 border border-gray-300 rounded"
         />
 
-        {/* Achternaam */}
+        {/* Last Name */}
         <label htmlFor="lastName" className="block mb-2">
           Last Name
         </label>
@@ -129,7 +154,7 @@ const RegisterPage = () => {
           className="w-full p-2 mb-4 border border-gray-300 rounded"
         />
 
-        {/* Wachtwoord */}
+        {/* Password */}
         <label htmlFor="password" className="block mb-2">
           Password
         </label>
@@ -143,7 +168,7 @@ const RegisterPage = () => {
           className="w-full p-2 mb-4 border border-gray-300 rounded"
         />
 
-        {/* Provincies dropdown */}
+        {/* Province Dropdown */}
         <label htmlFor="province" className="block mb-2">
           Province
         </label>
@@ -168,7 +193,7 @@ const RegisterPage = () => {
           <option value="Outside South Africa">Outside South Africa</option>
         </select>
 
-        {/* Land */}
+        {/* Country Dropdown */}
         <label htmlFor="country" className="block mb-2">
           Country
         </label>
@@ -186,7 +211,7 @@ const RegisterPage = () => {
           <option value="Other">Other</option>
         </select>
 
-        {/* Nieuwsbrief */}
+        {/* Newsletter */}
         <label htmlFor="subscribe" className="flex items-center mb-4">
           <input
             type="checkbox"
@@ -199,7 +224,7 @@ const RegisterPage = () => {
           Sign up for the email newsletter
         </label>
 
-        {/* Submit knop */}
+        {/* Submit Button */}
         <button
           type="submit"
           className="btn btn-primary w-full"
