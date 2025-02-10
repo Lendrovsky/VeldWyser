@@ -66,12 +66,13 @@ const Poll = () => {
     if (voted) return; // Don't allow voting after already voted
 
     const { error: voteError } = await supabaseCreateClient
-      .from("poll_votes")
-      .insert([{ 
-        poll_id: POLL_ID, 
-        option,
-        user_id: uuidv4()  // Random UUID for the vote (no association with user)
-      }]);
+  .from("poll_votes")
+  .insert([{ 
+    poll_id: POLL_ID, 
+    option,
+    user_id: userId  // Gebruik de opgeslagen userId
+  }]);
+
 
     if (voteError) {
       console.error("❌ Error saving vote:", voteError);
