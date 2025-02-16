@@ -58,7 +58,7 @@ const Step = ({
 // - Features: "ShipFast has user auth, Stripe, emails all set up for you"
 const Problem = () => {
   return (
-    <section className="relative bg-[url('/images/veld1.png')] bg-cover bg-center text-neutral-content">
+    <section className="relative bg-[url('/images/veld2.png')] bg-cover bg-center text-neutral-content">
       {/* Overlay met transparantie */}
       <div className="absolute inset-0 bg-neutral opacity-70 z-0"></div>
 
