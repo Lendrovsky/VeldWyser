@@ -117,7 +117,7 @@ const features = [
       format: "image/jpg",
       svg: (
         <Image
-        src="/images/icons/monitoring.png"
+        src="/images/icons/climate.png"
         alt="Custom Icon"
         width={56}
         height={56}
