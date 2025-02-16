@@ -15,7 +15,7 @@ export default async function layoutAccess({ children }: { children: any }) {
       {/* Full-width image with title above */}
       <div className="relative w-full h-[400px]">
         <Image
-          src="/images/veld2.png"
+          src="/images/clarens.jpg"
           alt="Veld landscape"
           layout="fill" // Ensures the image covers the full container
           objectFit="cover" // Ensures the image retains its aspect ratio while covering the area

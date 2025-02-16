@@ -15,7 +15,7 @@ export default async function layoutReport({ children }: { children: any }) {
       {/* Full-width image with title above */}
       <div className="relative w-full h-[400px]">
         <Image
-          src="/images/veld2.png"
+          src="/blog/introducing-supabase/Pieter 4.jpg"
           alt="Veld landscape"
           layout="fill" // This makes the image cover the entire container
           objectFit="cover"

@@ -15,7 +15,7 @@ export default async function layoutSecurity({ children }: { children: any }) {
       {/* Full-width image with title above */}
       <div className="relative w-full h-[400px]">
         <Image
-          src="/images/veld2.png"
+          src="/images/veld1.png"
           alt="Veld landscape"
           layout="fill" // This makes the image cover the entire container
           objectFit="cover"
