@@ -62,7 +62,7 @@ const features = [
       In doing so, over time the condition of the veld will improve which increases the carrying capacity of your veld. 
       This will eventually lead to more animals or fatter animals per ha.`,
       type: "image",
-      path: "/images/runderen1.png",
+      path: "/images/runderen.jpg",
       format: "image/png",
       svg: (
         <Image
