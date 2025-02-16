@@ -5,7 +5,7 @@ const CTA = () => {
   return (
     <section className="relative hero overflow-hidden min-h-screen">
       <Image
-        src="/images/veld2.png"
+        src="/blog/introducing-supabase/Pieter 3.jpg"
         alt="Background"
         className="object-cover w-full"
         fill
